@@ -81,7 +81,7 @@ void relogio::imprimirHora() {
 
 }
 
-int relogio::calculaMinutos() {
+int relogio::calculaMinutos(){
     return (hora * 60) + minuto;
 }
 
