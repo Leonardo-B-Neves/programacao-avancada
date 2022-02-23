@@ -2,10 +2,10 @@
 using namespace std;
 
 class relogio{
-    private:
+private:
     int hora,minuto;
 
-    public:
+public:
     //Inicializa o relogio com hora = 0 e minuto = 0
     relogio();
     // Definine a hora com um inteiro de 0 a 23
@@ -14,7 +14,7 @@ class relogio{
     void definirMinuto(int minuto);
     //Mostra a hora
     void imprimirHora();
-
+    //trasforma a hora em minutos e retorna como inteiro
     int calculaMinutos();
 
 };
