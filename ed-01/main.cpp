@@ -23,7 +23,7 @@ int main() {
 
     relogio hora1 = *new relogio();
     relogio hora2 = *new relogio();
-    relogio hora3 = *new relogio;
+    relogio hora3 = *new relogio();
 
     hora1.definirHora(23);
     hora2.definirHora(15);
@@ -69,7 +69,7 @@ void relogio::definirMinuto(int minuto)
     }
 }
 
-void relogio::imprimirHora() {
+void relogio::imprimirHora(){
     if (hora < 10){
         cout << 0;
     }
