@@ -3,7 +3,7 @@ using namespace std;
 
 class relogio{
 private:
-    int hora,minuto;
+    int _hora,_minuto;
 
 public:
     //Inicializa o relogio com hora = 0 e minuto = 0
@@ -13,17 +13,17 @@ public:
     // Definine a minuto com um inteiro de 0 a 59
     void definirMinuto(int minuto);
     //Mostra a hora
-    void imprimirHora();
+    void imprimirHora() const;
     //trasforma a hora em minutos e retorna como inteiro
-    int calculaMinutos();
+    int calculaMinutos() const;
 
 };
 
 int main() {
 
-    relogio hora1 = *new relogio();
-    relogio hora2 = *new relogio();
-    relogio hora3 = *new relogio();
+    relogio hora1;
+    relogio hora2;
+    relogio hora3;
 
     hora1.definirHora(23);
     hora2.definirHora(15);
@@ -48,40 +48,34 @@ int main() {
 }
 
 
-relogio::relogio()
-{
-    hora = 0;
-    minuto = 0;
-}
+relogio::relogio(): _hora(0), _minuto(0){}
 
 void relogio::definirHora(int hora)
 {
-    if (hora < 24 && hora >= 0){
-        this->hora = hora;
-    }
-
+    if(hora < 24 && hora >= 0)
+        _hora = hora;
 }
 
 void relogio::definirMinuto(int minuto)
 {
     if (minuto < 60 && minuto >= 0){
-        this->minuto = minuto;
+        _minuto = minuto;
     }
 }
 
-void relogio::imprimirHora(){
-    if (hora < 10){
+void relogio::imprimirHora() const{
+    if (_hora < 10){
         cout << 0;
     }
-    cout << hora << ":";
-    if (minuto < 10){
+    cout << _hora << ":";
+    if (_minuto < 10){
         cout << 0;
     }
-    cout << minuto << "\n";
+    cout << _minuto << "\n";
 
 }
 
-int relogio::calculaMinutos(){
-    return (hora * 60) + minuto;
+int relogio::calculaMinutos() const{
+    return (_hora * 60) + _minuto;
 }
 
