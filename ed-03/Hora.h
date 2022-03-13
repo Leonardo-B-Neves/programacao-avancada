@@ -8,10 +8,13 @@
 
 class Hora {
 public:
+    //Construtores
     Hora();
     Hora(int hora, int minuto, int segundo);
+    //Metodo de contas pedidos
     Hora soma (Hora hora);
     Hora subtrai(Hora hora);
+    //Metodo que ajuda a mostrar os metodos de conta funcionando
     void imprime();
 
 

@@ -9,11 +9,15 @@
 
 class Conta {
 public:
+    //Construtores
     Conta();
     Conta(std::string numero, std::string agencia, Cliente cliente, double saldo);
+    //Metodos de deposito e saque da Conta
     void depositar(double deposito);
     void retirar(double retirada);
+    //Metodo para mudar o Cliente de conta
     void setCliente(Cliente cliente);
+    //metodo e imprime o saldo
     void imprimirExtrato() const;
 
 private:
