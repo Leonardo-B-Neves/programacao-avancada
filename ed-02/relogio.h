@@ -26,9 +26,7 @@ public:
     }
     //Mostra a hora
     void imprimirHora() const{
-
         std::cout << std::setfill('0') << std::setw(2) << _hora << ":" << std::setw(2) << _minuto <<"\n";
-
     }
     //trasforma a hora em minutos e retorna como inteiro
     int calculaMinutos() const{
