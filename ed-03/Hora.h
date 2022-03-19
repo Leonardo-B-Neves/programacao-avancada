@@ -12,10 +12,10 @@ public:
     Hora();
     Hora(int hora, int minuto, int segundo);
     //Metodo de contas pedidos
-    Hora soma (Hora hora);
-    Hora subtrai(Hora hora);
+    Hora soma (Hora hora) const;
+    Hora subtrai(Hora hora) const;
     //Metodo que ajuda a mostrar os metodos de conta funcionando
-    void imprime();
+    void imprime() const;
 
 
 private:

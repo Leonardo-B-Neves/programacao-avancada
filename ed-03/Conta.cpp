@@ -10,15 +10,15 @@ Conta::Conta():_numero(""), _agencia(""), _cliente(Cliente()), _saldo(0) {}
 
 Conta::Conta(std::string numero, std::string agencia, Cliente cliente, double saldo):_numero(numero), _agencia(agencia), _cliente(cliente), _saldo(saldo) {}
 
-void Conta::depositar(double deposito) {
+inline void Conta::depositar(double deposito) {
     _saldo += deposito;
 }
 
-void Conta::retirar(double retirada) {
+inline void Conta::retirar(double retirada) {
     _saldo+= retirada;
 }
 
-void Conta::setCliente(Cliente cliente) {
+inline void Conta::setCliente(Cliente cliente) {
     _cliente = cliente;
 }
 

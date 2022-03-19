@@ -10,7 +10,7 @@ Hora::Hora():_hora(0), _minuto(0), _segundo(0) {}
 
 Hora::Hora(int hora, int minuto, int segundo):_hora(hora), _minuto(minuto), _segundo(segundo) {}
 
-Hora Hora::soma(Hora hora) {
+Hora Hora::soma(Hora hora) const {
     int horaSoma = _hora + hora._hora;
     int minutoSoma = _minuto + hora._minuto;
     int segundoSoma = _segundo + hora._segundo;
@@ -25,11 +25,11 @@ Hora Hora::soma(Hora hora) {
     if(horaSoma >= HORA_MAX){
         horaSoma -= HORA_MAX;
     }
-    return Hora(horaSoma, minutoSoma, segundoSoma);
+    return {horaSoma, minutoSoma, segundoSoma};
 
 }
 
-Hora Hora::subtrai(Hora hora) {
+Hora Hora::subtrai(Hora hora) const {
     int horaSoma = _hora - hora._hora;
     int minutoSoma = _minuto - hora._minuto;
     int segundoSoma = _segundo - hora._segundo;
@@ -44,9 +44,9 @@ Hora Hora::subtrai(Hora hora) {
     if (horaSoma < 0){
         horaSoma += HORA_MAX;
     }
-    return Hora(horaSoma, minutoSoma, segundoSoma);
+    return {horaSoma, minutoSoma, segundoSoma};
 }
 
-void Hora::imprime() {
+void Hora::imprime() const {
     std::cout << std::setfill('0') << std::setw(2) << _hora << ":" << std::setw(2) << _minuto << ":" << std::setw(2) << _segundo << '\n';
 }

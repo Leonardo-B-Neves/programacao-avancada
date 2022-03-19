@@ -7,6 +7,12 @@ using namespace std;
 int main() {
     //Teste de Cliente e Conta
     Cliente cliente("leonardo", "leonardo@gmail.com", "07/06/2000", 21);
+    Cliente cliente1;
+    cout << "nome: " << cliente1.getNome() << "\n";
+    cout << "email: " << cliente1.getEmail() << "\n";
+    cout << "data de nacimento: " << cliente1.getData() << "\n";
+    cout << "idade: " << cliente1.getIdade() << "\n";
+
     Conta conta1("12313", "dermi", cliente, 100.00);
     cout << "saldo: ";
     conta1.imprimirExtrato();
