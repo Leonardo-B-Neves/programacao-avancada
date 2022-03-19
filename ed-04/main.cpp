@@ -4,6 +4,7 @@
 using namespace std;
 
 int main() {
+    std::cout << "Impressao De Criacao\n";
     Banco meuBanco(10);
     auto* cliente2 =  new Cliente("leonardo", "leonado@gmail.com", "07/05/2000", 20 );
     auto* cliente3 =  new Cliente("jandkajs", "jandkajs@gmail.com", "03/03/2001", 19 );
@@ -16,14 +17,14 @@ int main() {
     meuBanco.cadastrarConta("81827924556", "cachorro", cliente4, 1090.20);
     meuBanco.cadastrarConta("204897363", "pato", cliente5, 1200);
 
-    std::cout << "Meu Banco\n";
+    std::cout << "\n\nMeu Banco\n";
     meuBanco.imprime();
 
     Banco superBanco(10000);
 
     superBanco.cadastrarConta("2222222", "fama", new Cliente("bernardo", "bernardo@gmail.com", "08/09/1980", 40), 900.80);
 
-    std::cout << "\nSuper Banco\n";
+    std::cout << "\n\nSuper Banco\n";
     superBanco.imprime();
 
     return 0;

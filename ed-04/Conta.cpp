@@ -8,7 +8,12 @@
 
 Conta::Conta():_numero(""), _agencia(""), _cliente(NULL), _saldo(0) {}
 
-Conta::Conta(std::string numero, std::string agencia, Cliente* cliente, double saldo):_numero(numero), _agencia(agencia), _cliente(cliente), _saldo(saldo) {}
+Conta::Conta(std::string numero, std::string agencia, Cliente* cliente, double saldo):_numero(numero), _agencia(agencia), _cliente(cliente), _saldo(saldo) {
+    std::cout << "Numero: " << numero << "\n";
+    std::cout << "Agencia: " << agencia << "\n";
+    cliente->imprimeCliente();
+    std::cout << "Saldo: " << saldo << "\n\n";
+}
 
 inline void Conta::depositar(double deposito) {
     _saldo += deposito;
