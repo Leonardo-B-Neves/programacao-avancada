@@ -18,13 +18,13 @@ public:
         delete []_contas;
     }
     //imprime banco
-    void imprimeExtrato(){
+    void imprimeExtrato()const{
         for (int i = 0; i < _atual; i++){
             _contas[i]->imprimirExtrato();
         }
     }
 
-    void aplicarJuros(int dias){
+    void aplicarJuros(int dias)const{
         for(int i = 0; i < _atual; i++){
             _contas[i]->aplicarJurosDiarios(dias);
         }

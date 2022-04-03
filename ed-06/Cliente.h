@@ -27,7 +27,7 @@ Cliente::Cliente():_nome(""), _email(""), _dataNacimento(""), _idade(0){}
 
 Cliente::Cliente(std::string nome, std::string email, std::string data, int idade):_nome(nome), _email(email), _dataNacimento(data), _idade(idade){}
 
-void Cliente::imprimeCliente() const {
+inline void Cliente::imprimeCliente() const {
     std::cout << "Nome: " << _nome << "\n";
     std::cout << "E-mail: " << _email << "\n";
     std::cout << "Data de nacimento: " << _dataNacimento << "\n";
