@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Conta.h"
+#include "../ed-06/Conta.h"
 #include "Cliente.h"
 #include "ContaCorrente.h"
 #include "ContaPoupanca.h"

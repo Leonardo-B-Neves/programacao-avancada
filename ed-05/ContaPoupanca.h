@@ -5,7 +5,7 @@
 #ifndef ED_05_CONTAPOUPANCA_H
 #define ED_05_CONTAPOUPANCA_H
 
-#include "Conta.h"
+#include "../ed-06/Conta.h"
 #include "Investimento.h"
 
 class ContaPoupanca: public Conta, public Investimento{

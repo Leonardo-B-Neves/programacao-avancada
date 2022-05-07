@@ -2,7 +2,7 @@
 #ifndef ED_03_CONTA_H
 #define ED_03_CONTA_H
 
-#include "Cliente.h"
+#include "../ed-05/Cliente.h"
 #include "iostream"
 #include "iomanip"
 

@@ -5,7 +5,7 @@
 #ifndef ED_05_CONTACORRENTE_H
 #define ED_05_CONTACORRENTE_H
 
-#include "Conta.h"
+#include "../ed-06/Conta.h"
 #include "Investimento.h"
 #include <iostream>
 
